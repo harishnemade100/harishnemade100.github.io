@@ -1,3 +1,7 @@
+/* --------------------- */
+/* GLOBAL STYLES */
+/* --------------------- */
+
 * {
   box-sizing: border-box;
 }
@@ -5,10 +9,56 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f0f4ff, #eafaf1);
+  background: linear-gradient(135deg, #eef2ff, #f8faff);
   color: #333;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2em;
+  color: #3f51b5;
+}
+
+section {
+  max-width: 1000px;
+  margin: 70px auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+#about::before {
+  background-image: url('images/about-bg.svg');
+}
+
+#experience::before {
+  background-image: url('images/experience-bg.svg');
+}
+
+#projects::before {
+  background-image: url('images/projects-bg.svg');
+}
+
+#contact::before {
+  background-image: url('images/contact-bg.svg');
+}
+
+/* --------------------- */
+/* HEADER + NAV */
+/* --------------------- */
 
 header {
   display: flex;
@@ -16,14 +66,14 @@ header {
   align-items: center;
   background: linear-gradient(90deg, #3f51b5, #5c6bc0);
   color: white;
-  padding: 12px 20px;
+  padding: 15px 25px;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
@@ -37,8 +87,8 @@ header {
   text-decoration: none;
   background: none;
   border: none;
-  cursor: pointer;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .nav a:hover {
@@ -54,65 +104,90 @@ header {
   cursor: pointer;
 }
 
-section {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
+/* --------------------- */
+/* INTRO SECTION */
+/* --------------------- */
 
 #intro {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #cfd9ff, #f0f0ff);
+  padding: 100px 20px;
   border-radius: 16px;
+  background: linear-gradient(135deg, #dbe5ff, #f0f2ff);
+  margin-top: 50px;
 }
 
 #intro h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
+  margin-bottom: 10px;
 }
 
 #intro h2 {
+  font-size: 1.3em;
   color: #555;
-  font-size: 1.2em;
 }
 
-.project {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
+/* --------------------- */
+/* CARD STYLES (Experience + Projects) */
+/* --------------------- */
+
+.card, .project, .job {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
   margin-bottom: 25px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.project:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.card:hover, .project:hover, .job:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
+
+.job h3 {
+  margin: 0;
+  font-size: 1.3em;
+  color: #3f51b5;
+}
+
+.job h3 span {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.job h4 {
+  margin: 5px 0 15px;
+  font-weight: normal;
+  color: #444;
+}
+
+/* --------------------- */
+/* FORM & CONTACT */
+/* --------------------- */
 
 form input, form textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
+  padding: 12px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 form button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background: #3f51b5;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 1em;
 }
 
 form button:hover {
   background: #5c6bc0;
 }
 
-/* Social links */
 .social li {
   display: inline-block;
   margin: 0 10px 15px 0;
@@ -122,54 +197,27 @@ form button:hover {
   color: #3f51b5;
   font-weight: bold;
 }
-/* Experience section */
-#experience .job {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
 
-#experience h3 {
-  margin: 0;
-  font-size: 1.3em;
-  color: #3f51b5;
-}
+/* --------------------- */
+/* RESPONSIVE NAV */
+/* --------------------- */
 
-#experience h3 span {
-  font-size: 0.9em;
-  color: #666;
-}
-
-#experience h4 {
-  margin: 5px 0 15px;
-  font-weight: normal;
-  color: #444;
-}
-
-#experience ul {
-  margin-left: 20px;
-  list-style: disc;
-}
-
-/* Mobile responsive */
 @media (max-width: 768px) {
   .nav {
     display: none;
     flex-direction: column;
     background: #3f51b5;
     position: absolute;
-    top: 60px;
+    top: 70px;
     right: 0;
-    width: 180px;
+    width: 200px;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 12px;
   }
 
   .nav a {
-    padding: 10px 0;
     display: block;
+    padding: 10px 0;
   }
 
   .menu-toggle {
@@ -177,12 +225,18 @@ form button:hover {
   }
 }
 
+/* --------------------- */
+/* DARK MODE */
+/* --------------------- */
+
 body.dark-mode {
   background: #121212;
   color: #eee;
 }
 
-body.dark-mode .project {
+body.dark-mode .card,
+body.dark-mode .project,
+body.dark-mode .job {
   background: #1e1e1e;
 }
 

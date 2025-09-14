@@ -1,6 +1,8 @@
-/* styles.css */
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
 
-/* Root styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -21,16 +23,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .nav li {
-  margin: 0 15px;
+  margin: 5px 10px;
 }
 
 .nav a, .nav button {
   color: white;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 6px 10px;
   background: none;
   border: none;
   cursor: pointer;
@@ -42,7 +47,7 @@ header {
 }
 
 section {
-  max-width: 800px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -55,17 +60,22 @@ section {
 
 #intro h1 {
   margin-bottom: 10px;
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 
 #intro h2 {
   margin: 5px 0 20px;
   color: #555;
+  font-size: 1.2em;
 }
 
 /* Project styling */
 .project {
   margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .project h3 {
@@ -79,7 +89,7 @@ ul {
 }
 
 .social li {
-  display: inline;
+  display: inline-block;
   margin-right: 10px;
 }
 
@@ -95,30 +105,24 @@ form label {
 
 form input, form textarea {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-top: 5px;
-  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 form button {
   margin-top: 10px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   background-color: #24292e;
   color: white;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
 form button:hover {
   background-color: #444;
-}
-
-/* Footer (if any) */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #eee;
-  margin-top: 40px;
 }
 
 /* Dark mode styles */
@@ -135,6 +139,11 @@ body.dark-mode #intro {
   background: #1e1e1e;
 }
 
+body.dark-mode .project {
+  background: #1f1f1f;
+  color: #e0e0e0;
+}
+
 body.dark-mode .project h3 {
   color: #ddd;
 }
@@ -145,4 +154,57 @@ body.dark-mode form button {
 
 body.dark-mode form button:hover {
   background-color: #666;
+}
+
+/* ============================= */
+/* 📱 Mobile Responsive Styling  */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav li {
+    margin: 8px 0;
+  }
+
+  #intro h1 {
+    font-size: 1.8em;
+  }
+
+  #intro h2 {
+    font-size: 1em;
+  }
+
+  section {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .project {
+    padding: 15px;
+  }
+
+  form input, form textarea {
+    font-size: 16px;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #intro h1 {
+    font-size: 1.5em;
+  }
+
+  #intro h2 {
+    font-size: 0.9em;
+  }
+
+  .nav a, .nav button {
+    font-size: 14px;
+  }
 }

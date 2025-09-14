@@ -3,113 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Harish Nemade - Data Engineer & Software Developer</title>
+  <title>Harish Nemade - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul class="nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills & Tools</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle">Toggle Theme</button></li>
-      </ul>
+    <div class="logo">Harish Nemade</div>
+    <button id="menu-toggle" class="menu-toggle">☰</button>
+    <nav id="nav-menu" class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle">🌙</button>
     </nav>
   </header>
 
   <section id="intro">
     <h1>Harish Nemade</h1>
     <h2>Data Engineer & Software Developer</h2>
-    <p>Welcome to my portfolio! I am a data engineer and software developer with strong experience in building scalable data solutions and machine learning applications.</p>
+    <p>Building scalable data pipelines, backend APIs, and intelligent ML solutions.</p>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>With expertise in Python, SQL, and cloud computing on AWS, I build end-to-end data pipelines and analytics platforms. I work extensively with machine learning techniques, particularly in Natural Language Processing (NLP) and transformer models, as well as big data tools like Apache Spark and Hadoop. I hold industry certifications in AWS and deep learning, and continuously seek to apply cutting-edge technologies to solve challenging data problems.</p>
-    <ul>
-      <li>Python, SQL, PySpark</li>
-      <li>AWS (EC2, S3, Athena, Glue, Lambda)</li>
-      <li>Machine Learning (Transformers, NLP, TensorFlow, XGBoost, SVM)</li>
-      <li>Big Data: Hadoop, Spark, Kafka</li>
-      <li>Web & APIs: FastAPI, Docker, PostgreSQL</li>
-    </ul>
+    <p>With expertise in Python, SQL, and AWS, I build end-to-end data pipelines and ML applications. I work with PySpark, Kafka, TensorFlow, and FastAPI to deliver scalable and efficient solutions.</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-
     <div class="project">
       <h3>Real-Time Stock Market Data Pipeline</h3>
-      <p>This project implements a real-time data pipeline to ingest, process, and analyze live stock market data. It uses Apache Kafka for streaming data, storing raw and processed data in AWS (S3) and querying with AWS Athena. The scalable architecture enables real-time analytics on stock performance:contentReference[oaicite:0]{index=0}.</p>
-      <p><strong>Tech stack:</strong> Python, Apache Kafka, AWS EC2, AWS S3, AWS Glue, AWS Athena</p>
+      <p>Built using Kafka + AWS Glue + Athena to stream, process, and analyze stock data in real-time.</p>
     </div>
-
     <div class="project">
       <h3>Customer Review Sentiment Analysis</h3>
-      <p>I developed a sentiment analysis system for customer reviews. This project compares traditional machine learning models and deep learning. It uses Support Vector Machines (SVM) for classification:contentReference[oaicite:1]{index=1}, and XGBoost for gradient-boosted trees:contentReference[oaicite:2]{index=2}. A neural network was built with TensorFlow for end-to-end learning on text data. The system pre-processes reviews, extracts features, and classifies sentiment (positive/negative) using these models.</p>
-      <p><strong>Tech stack:</strong> Python, scikit-learn (SVM, XGBoost), TensorFlow, NLP (Transformers), pandas, NumPy</p>
+      <p>NLP-based system using SVM, XGBoost, and TensorFlow to classify e-commerce reviews.</p>
     </div>
-
     <div class="project">
       <h3>ETL Pipeline for Financial Data</h3>
-      <p>This project automated ETL (Extract, Transform, Load) processes for financial datasets. It uses AWS Glue, a serverless data integration service for ETL:contentReference[oaicite:3]{index=3}, to clean and aggregate data from various sources. Processed data is stored in AWS and visualized using Tableau dashboards for business insights. This ensures reliable data ingestion and compelling visualizations for decision-makers.</p>
-      <p><strong>Tech stack:</strong> AWS S3, AWS Glue, AWS Athena, Apache Spark, Tableau</p>
+      <p>AWS-based ETL pipeline transforming raw financial data into Tableau-ready dashboards.</p>
     </div>
-
     <div class="project">
       <h3>Order Service API</h3>
-      <p>Developed a RESTful Order Service API in Python using FastAPI, a modern high-performance web framework:contentReference[oaicite:4]{index=4}. The API supports CRUD operations for orders, with PostgreSQL as the backend database for persistence:contentReference[oaicite:5]{index=5}. The service is containerized with Docker for consistent deployment and scalability.</p>
-      <p><strong>Tech stack:</strong> Python, FastAPI, PostgreSQL, Docker, SQLAlchemy</p>
+      <p>RESTful API using FastAPI + PostgreSQL + Docker for managing grocery orders.</p>
     </div>
-
   </section>
 
   <section id="skills">
     <h2>Skills & Tools</h2>
     <ul>
-      <li>Languages: Python, SQL, Java</li>
-      <li>Web & API: FastAPI, RESTful APIs, Docker</li>
-      <li>Databases: PostgreSQL, Amazon RDS, NoSQL</li>
-      <li>Big Data: PySpark, Hadoop, Spark, Kafka</li>
-      <li>AWS Services: EC2, S3, Athena, Glue, Lambda, EKS</li>
-      <li>Machine Learning: TensorFlow, scikit-learn, XGBoost, SVMs, Transformers</li>
-      <li>Data Visualization: Tableau, Matplotlib, Seaborn</li>
-      <li>Tools: Git, GitHub, Unix/Linux, CI/CD (GitHub Actions)</li>
+      <li>Python, SQL, PySpark, Kafka, Hadoop</li>
+      <li>FastAPI, Docker, PostgreSQL</li>
+      <li>AWS (S3, Glue, Athena, Lambda, EC2)</li>
+      <li>ML: TensorFlow, XGBoost, Transformers, NLP</li>
+      <li>Tableau, GitHub Actions</li>
     </ul>
   </section>
 
   <section id="education">
     <h2>Education & Certifications</h2>
     <ul>
-      <li><strong>Bachelor of Engineering (B.E.)</strong> in Computer Science, University of Pune (2018)</li>
-      <li><strong>M.S. in Data Science (expected 2026)</strong>, University of XYZ</li>
-    </ul>
-    <ul>
-      <li>AWS Certified Solutions Architect – Associate</li>
-      <li>AWS Certified Data Engineer – Associate</li>
-      <li>TensorFlow Developer Certificate</li>
-      <li>IBM Data Science Professional Certificate</li>
+      <li>PG Diploma in Big Data Analytics - :contentReference[oaicite:0]{index=0} Pune</li>
+      <li>B.E. Mechanical - :contentReference[oaicite:1]{index=1} Pune</li>
+      <li>Clean Code, SQL, Docker, SOLID Principles</li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>You can reach out via email or connect on social media:</p>
     <ul class="social">
       <li><a href="https://github.com/harishnemade100" target="_blank">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/harishnemade100" target="_blank">LinkedIn</a></li>
+      <li><a href="https://linkedin.com/in/harishnemade100" target="_blank">LinkedIn</a></li>
     </ul>
-    <h3>Send a message</h3>
-    <form action="#" method="post">
-      <label>Name:<br><input type="text" name="name" required></label><br>
-      <label>Email:<br><input type="email" name="email" required></label><br>
-      <label>Message:<br><textarea name="message" rows="4" required></textarea></label><br>
-      <button type="submit">Submit</button>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
-    <p><a href="resume.pdf" download>Download Resume (PDF)</a></p>
+    <p><a href="resume.pdf" download>Download Resume</a></p>
   </section>
 
   <script src="script.js"></script>
